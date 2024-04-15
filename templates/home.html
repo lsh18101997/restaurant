@@ -1,0 +1,13 @@
+{% for cat in category %}
+    <ul>
+        <li>{{cat.name}}</li>
+    </ul>
+{% endfor %}
+
+{% for f in food %}
+    <ul>
+        <li><a href="{% url 'china:detail' pk=f.id %}">{{f.name}}</a></li>
+    </ul>
+{% endfor %}
+
+<a href="{% url 'china:index' %}"><button type="submit" class="btn btn-danger">메뉴 추가하기</button></a>

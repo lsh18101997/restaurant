@@ -1,0 +1,11 @@
+<ul>
+    <li>{{food.name}}</li>
+    <li>{{food.price}}</li>
+    <li>{{food.description}}</li>
+    <img src="{{ food.url }}" class="card-img-top food-image">
+    <br>
+    <form action="{% url 'china:delete' pk=food.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger">삭제하기</button>
+    </form>
+</ul>
