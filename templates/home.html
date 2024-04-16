@@ -1,9 +1,10 @@
+<h1>카테고리</h1>
 {% for cat in category %}
     <ul>
         <li>{{cat.name}}</li>
     </ul>
 {% endfor %}
-
+<h1>메뉴</h1>
 {% for f in food %}
     <ul>
         <li><a href="{% url 'china:detail' pk=f.id %}">{{f.name}}</a></li>
@@ -11,3 +12,4 @@
 {% endfor %}
 
 <a href="{% url 'china:index' %}"><button type="submit" class="btn btn-danger">메뉴 추가하기</button></a>
+<a href="{% url 'customer:index' %}"><button type="submit" class="btn btn-danger">고객 페이지로 이동</button></a>
